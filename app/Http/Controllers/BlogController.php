@@ -94,7 +94,7 @@ class BlogController extends Controller
      * @param  \App\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Blog $blog)
+    public function update(Request $request, $id)
     {
       $blog = Blog::find($id);
       $blog->title = $request->get('name');
